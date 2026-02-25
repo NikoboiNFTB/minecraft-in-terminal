@@ -1,6 +1,6 @@
 # Minecraft in Terminal
 
-Colored.
+This is fork of the minecraft in terminal project. But ported to linux. And added full coloring.
 
 ## Contributing
 
