@@ -8,13 +8,13 @@ Feel free to fork this repository and submit issues or pull requests if you have
 
 ## Credits
 
-Original Fork by **[jayjayare](https://github.com/jayjayare)**
+Original Fork by [**jayjayare**](https://github.com/jayjayare)
 
-Original Project by **[Shubhkarman-Singh-Sandhu](https://github.com/Shubhkarman-Singh-Sandhu)**
+Original Project by [**Shubhkarman-Singh-Sandhu**](https://github.com/Shubhkarman-Singh-Sandhu)
 
-Forked and Upgraded by **[Nikoboi](https://github.com/NikoboiNFTB/)**
+Forked and Upgraded by [**Nikoboi**](https://github.com/NikoboiNFTB/)
 
-Script Logic Fine-Tuned with **[ChatGPT](https://chatgpt.com/)**
+Script Logic Fine-Tuned with [**ChatGPT**](https://chatgpt.com/)
 
 ## License
 
