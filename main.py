@@ -25,11 +25,13 @@ if window_id is None:
 # --- Get window geometry via xwininfo ---
 geom_output = subprocess.check_output(["xwininfo", "-id", hex(window_id)]).decode()
 
+
 def parse_xwininfo_value(output, key):
     for line in output.splitlines():
         if key in line:
             return int(line.split()[-1])  # Take the last element
     raise RuntimeError(f"{key} not found in xwininfo output")
+
 
 x = parse_xwininfo_value(geom_output, "Absolute upper-left X:")
 y = parse_xwininfo_value(geom_output, "Absolute upper-left Y:")
@@ -40,7 +42,7 @@ print(f"Capturing Minecraft window {width}x{height} at ({x},{y})")
 
 # --- Connect to X11 ---
 d = display.Display()
-win = d.create_resource_object('window', window_id)
+win = d.create_resource_object("window", window_id)
 
 # --- Clear terminal once ---
 print("\033[2J", end="")
@@ -49,8 +51,10 @@ while True:
     start_time = time.time()
 
     # Grab window contents
-    raw = win.get_image(0, 0, width, height, X.ZPixmap, 0xffffffff)
-    img = Image.frombytes("RGB", (width, height), raw.data, "raw", "BGRX")  # X11 stores BGRX
+    raw = win.get_image(0, 0, width, height, X.ZPixmap, 0xFFFFFFFF)
+    img = Image.frombytes(
+        "RGB", (width, height), raw.data, "raw", "BGRX"
+    )  # X11 stores BGRX
 
     # --- Dynamic scaling to terminal size ---
     term_cols, term_rows = shutil.get_terminal_size((80, 24))
